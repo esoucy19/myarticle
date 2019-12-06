@@ -184,6 +184,7 @@
 % New math symbols
 \newunicodechar{√}{\sqrt}
 \newunicodechar{⟌}{\overline{)}}
+\newunicodechar{｜}{\mid}
 
 % Some extra text formatting commands
 \newcommand*{\conclusion}[1]{\pinkbox{\textbf{Conclusion~: }#1}}
