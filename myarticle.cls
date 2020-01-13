@@ -20,6 +20,7 @@
 \RequirePackage[french]{babel}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+\RequirePackage{amsthm}
 \RequirePackage{mathtools}
 \RequirePackage{empheq}
 \RequirePackage[math-style=french]{unicode-math}
@@ -52,7 +53,7 @@
 % TeX Gyre Termes Math
 % TeX Gyre DejaVu Math
 % Asana-Math fonts
-% STIX
+% STIX Math
 % XITS Math
 % Libertinus Math
 % Fira Math
@@ -115,7 +116,6 @@
     \Large
     Présenté à\\
     \vspace{0.10cm}
-
     \@mysupervisor
     \vspace{1cm}
 
@@ -160,6 +160,24 @@
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 
+% Define QED symbol
+\renewcommand{\qedsymbol}{$■$}
+
+% Define some environments
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{corollary}[theorem]{Corollaire}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Définition}
+\theoremstyle{definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{example}{Exemple}[theorem]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remarque}
+\theoremstyle{remark}
+\newtheorem*{notation}{Notation}
+
 % Some useful math commands.
 \DeclarePairedDelimiter{\set}{\{}{\}}
 \newcommand*{\cls}[1]{\overline{#1}}
@@ -173,6 +191,8 @@
 \DeclareMathOperator*{\dim}{dim}
 \let\Ker\relax
 \DeclareMathOperator*{\Ker}{Ker}
+\let\Card\relax
+\DeclareMathOperator*{\Card}{Card}
 % Geometry
 \DeclareMathOperator*{\cis}{cis}
 % Complex numbers
@@ -180,6 +200,9 @@
 \DeclareMathOperator*{\R}{\mathfrak{Re}}
 \let\I\relax
 \DeclareMathOperator*{\I}{\mathfrak{Im}}
+% Functions
+\let\id\relax
+\DeclareMathOperator*{\id}{id}
 
 % New math symbols
 \newunicodechar{√}{\sqrt}
