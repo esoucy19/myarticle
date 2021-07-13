@@ -28,7 +28,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 \RequirePackage{xcolor}
-\RequirePackage{bracket}
+\RequirePackage{braket}
 
 % Reduce header size if in two column mode
 \AtBeginDocument{%
@@ -165,6 +165,7 @@
 \renewcommand{\qedsymbol}{$■$}
 
 % Define some environments
+% TODO: make alternate theorem definitions for english documents
 \newtheorem{theorem}{Théorème}[section]
 \newtheorem{lemma}[theorem]{Lemme}
 \newtheorem{corollary}[theorem]{Corollaire}
@@ -180,7 +181,7 @@
 \newtheorem*{notation}{Notation}
 
 % Some useful math commands.
-% DEPRECATED; use \set{} and \Set{} from bracket package instead
+% DEPRECATED; use \set{} and \Set{} from braket package instead
 % commands\DeclarePairedDelimiter{\set}{\{}{\}}
 
 % commands to generate overline notation more easily
