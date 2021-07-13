@@ -28,6 +28,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 \RequirePackage{xcolor}
+\RequirePackage{bracket}
 
 % Reduce header size if in two column mode
 \AtBeginDocument{%
@@ -179,7 +180,11 @@
 \newtheorem*{notation}{Notation}
 
 % Some useful math commands.
-\DeclarePairedDelimiter{\set}{\{}{\}}
+% DEPRECATED; use \set{} and \Set{} from bracket package instead
+% commands\DeclarePairedDelimiter{\set}{\{}{\}}
+
+% commands to generate overline notation more easily
+\newcommand*{\ovl}[1]{\overline{#1}}
 \newcommand*{\cls}[1]{\overline{#1}}
 \newcommand*{\cmp}[1]{\overline{#1}}
 
